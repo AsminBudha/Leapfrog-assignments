@@ -111,12 +111,12 @@ td {
 }
 
 .table-head-row {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 tr:nth-child(even) {
   background: #ccc;
-  color: #403d43;
+  color: #000;
 }
 
 tr:nth-child(odd) a {
