@@ -11,7 +11,7 @@ const data = [
     id: 2,
     title: 'Git & GitHub',
     sourceCode: 'https://github.com/prashantacharya/Leapfrog-assignments',
-    liveDemo: '/',
+    liveDemo: '#',
     type: 'github-alt',
   },
 ]
