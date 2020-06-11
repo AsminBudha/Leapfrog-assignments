@@ -9,11 +9,19 @@
 
 body {
   font-family: 'Rajdhani', sans-serif;
-  background-color: #f1f1f1;
-  color: #403d43;
-  width: 100%;
-  min-height: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    109.6deg,
+    rgb(44, 83, 131) 18.9%,
+    rgb(95, 175, 201) 91.1%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e7e7e7;
+  width: 100vw;
+  min-height: 100vh;
   font-size: 18px;
+  overflow: hidden;
 }
 
 a {
@@ -108,6 +116,11 @@ td {
 
 tr:nth-child(even) {
   background: #ccc;
+  color: #403d43;
+}
+
+tr:nth-child(odd) a {
+  color: #e7e7e7;
 }
 
 td:last-child {
