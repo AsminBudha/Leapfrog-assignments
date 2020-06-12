@@ -14,8 +14,8 @@ body {
   background-color: #73d6c3;
   padding: 95px;
   position: absolute;
-  top: 20%;
-  left: 25%;
+  top: calc(50% - 271px);
+  left: calc(50% - 402.5px);
 }
 
 .card-content {
@@ -42,7 +42,7 @@ body {
 }
 
 .icons span {
-  padding: 40px;
+  padding: 20px;
   border-radius: 50%;
   display: block;
   margin: 10px;
