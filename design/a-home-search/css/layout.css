@@ -22,3 +22,12 @@
 .main-content {
   width: 518px;
 }
+
+.right-sidebar {
+  width: 177px;
+}
+
+.right-sidebar-container {
+  width: calc(100% - 24px);
+  margin: 0 auto;
+}

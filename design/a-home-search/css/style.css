@@ -79,15 +79,13 @@
   background-color: #f5f5f5;
 }
 
-.sidebar ul li {
+.main ul li {
   list-style: none;
   padding: 10px 0px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 14px;
 }
-
-/* .sidebar ul li:hover {
-  cursor: pointer;
-  background-color: #ffffff;
-} */
 
 .sidebar li span:first-child {
   width: 152px;
@@ -101,4 +99,8 @@
 
 .list-heading h2 {
   font-size: 14px;
+}
+
+.right-sidebar li {
+  padding: 12px 0px;
 }
