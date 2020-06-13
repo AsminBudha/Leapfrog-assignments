@@ -39,3 +39,32 @@
 .user-info p {
   margin-top: 4px;
 }
+
+.nav {
+  background: #f5f5f5;
+  padding: 12px 0px;
+}
+
+.nav ul li {
+  display: inline;
+}
+
+.nav-menu li {
+  margin: 8px;
+}
+
+.nav .notification {
+  font-size: 11px;
+}
+
+.notification li {
+  margin: 0;
+}
+
+.notification li:first-child {
+  margin-right: 30px;
+}
+
+.notification img {
+  margin-right: 5px;
+}
