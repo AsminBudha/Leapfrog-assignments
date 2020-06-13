@@ -3,8 +3,15 @@
   padding: 0;
 }
 
-h2 {
+h4 {
   font-size: 13px;
+}
+
+h1 {
+  margin-left: 28px;
+  font-size: 26px;
+  font-family: Arial;
+  margin-top: -6px;
 }
 
 body {

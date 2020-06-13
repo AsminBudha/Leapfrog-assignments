@@ -13,14 +13,16 @@
 }
 
 .logo-container .search-bar {
-  margin-top: 30px;
+  margin-top: 32px;
 }
 
 .search-bar button {
-  width: 55px;
+  width: 54px;
+  height: 24px;
+  font-weight: bold;
   border: none;
   font-size: 12px;
-  padding: 10px;
+  /* padding: 10px; */
   color: white;
   background: url('../images/Search\ Button.png');
   background-repeat: no-repeat;
@@ -38,6 +40,7 @@
 
 .user-info p {
   margin-top: 4px;
+  font-weight: bold;
 }
 
 .nav {
@@ -47,10 +50,12 @@
 
 .nav ul li {
   display: inline;
+  font-weight: bold;
 }
 
 .nav-menu li {
   margin: 8px;
+  letter-spacing: 1px;
 }
 
 .nav .notification {
@@ -67,4 +72,33 @@
 
 .notification img {
   margin-right: 5px;
+}
+
+.sidebar {
+  width: 194px;
+  background-color: #f5f5f5;
+}
+
+.sidebar ul li {
+  list-style: none;
+  padding: 10px 0px;
+}
+
+/* .sidebar ul li:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+} */
+
+.sidebar li span:first-child {
+  width: 152px;
+}
+
+.list-heading {
+  color: #ffffff;
+  background-color: #2fc1da;
+  padding: 11px 0px;
+}
+
+.list-heading h2 {
+  font-size: 14px;
 }

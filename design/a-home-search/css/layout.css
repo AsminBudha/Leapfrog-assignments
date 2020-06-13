@@ -9,3 +9,16 @@
   background-color: #7dd9e8;
   padding: 0;
 }
+
+.main {
+  margin-top: 28px;
+}
+
+.sidebar-container {
+  width: 168px;
+  margin: 0 auto;
+}
+
+.main-content {
+  width: 518px;
+}
