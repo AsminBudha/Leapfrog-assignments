@@ -76,10 +76,15 @@
 
 .main ul li {
   list-style: none;
-  padding: 10px 0px;
+  padding: 10px 13px;
   letter-spacing: -1px;
   font-weight: bold;
   line-height: 14px;
+}
+
+.main ul li:hover {
+  cursor: pointer;
+  background-color: #ffffff;
 }
 
 .sidebar li span:first-child {
@@ -94,6 +99,7 @@
 
 .list-heading h2 {
   font-size: 14px;
+  margin-left: 13px;
 }
 
 .right-sidebar li {
