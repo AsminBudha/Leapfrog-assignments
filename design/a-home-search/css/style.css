@@ -146,15 +146,21 @@
   position: relative;
 }
 
+.nav-link:hover {
+  cursor: pointer;
+  background: url('../images/Blue-button.png');
+  color: white;
+}
+
 .nav-link-container .active {
   background: url('../images/Blue-button.png');
   color: white;
 }
 
 .nav-link div {
-  margin-top: 6px;
-  top: 5px;
+  margin-top: 9px;
   text-align: center;
+  font-size: 11px;
 }
 
 .post {
@@ -171,4 +177,14 @@
 .post p {
   font-size: 11px;
   margin: 2px 0px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.footer ul li {
+  display: inline;
+  /* font-size: 10px; */
+  margin-right: 10px;
 }
