@@ -1,0 +1,196 @@
+.logo-container {
+  width: 582px;
+}
+
+.logo-container input {
+  width: 262px;
+  height: 12px;
+  padding: 9px;
+  border: none;
+  background: url('../images/Search\ Bar.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo-container .search-bar {
+  margin-top: 32px;
+}
+
+.search-bar button {
+  width: 54px;
+  height: 24px;
+  font-weight: bold;
+  border: none;
+  font-size: 12px;
+  /* padding: 10px; */
+  color: white;
+  background: url('../images/Search\ Button.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-bar button:hover {
+  cursor: pointer;
+}
+
+.user-info {
+  text-align: right;
+  padding: 25px 0px;
+}
+
+.user-info p {
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+.nav {
+  background: #f5f5f5;
+  padding: 12px 0px;
+}
+
+.nav ul li {
+  display: inline;
+  font-weight: bold;
+}
+
+.nav-menu li {
+  margin: 8px;
+  letter-spacing: 1px;
+}
+
+.nav .notification {
+  font-size: 11px;
+}
+
+.notification li {
+  margin: 0;
+}
+
+.notification li:first-child {
+  margin-right: 30px;
+}
+
+.notification img {
+  margin-right: 5px;
+}
+
+.main ul li {
+  list-style: none;
+  padding: 10px 13px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 14px;
+}
+
+.main ul li:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.sidebar li span:first-child {
+  width: 152px;
+}
+
+.list-heading {
+  color: #ffffff;
+  background-color: #2fc1da;
+  padding: 11px 0px;
+}
+
+.list-heading h2 {
+  font-size: 14px;
+  margin-left: 13px;
+}
+
+.right-sidebar li {
+  padding: 12px 0px;
+}
+
+.main-content .entries {
+  margin-top: 6px;
+}
+
+.entries-nav {
+  width: 100%;
+  border-bottom: 2px solid #2fc1da;
+}
+
+.entries-nav-items {
+  position: relative;
+}
+
+.entries-nav-items .heading {
+  text-align: center;
+  margin-top: 9px;
+}
+
+.left-nav {
+  width: 257px;
+  height: 66px;
+  background: url('../images/Left\ Rounded\ Corner.png');
+}
+
+.right-nav {
+  width: 257px;
+  height: 66px;
+  background: url('../images/Right\ Rounded\ Corner.png');
+}
+
+.nav-link-container {
+  width: 238px;
+  height: 28px;
+  position: absolute;
+  bottom: 0;
+  left: 9px;
+}
+
+.nav-link {
+  width: 115px;
+  height: 28px;
+  background: url('../images/Gray-button.png');
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  background: url('../images/Blue-button.png');
+  color: white;
+}
+
+.nav-link-container .active {
+  background: url('../images/Blue-button.png');
+  color: white;
+}
+
+.nav-link div {
+  margin-top: 9px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.post {
+  width: 100%;
+  /* padding: 15px 0px; */
+  padding: 13px 0px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.post div:first-child {
+  margin-right: 8px;
+}
+
+.post p {
+  font-size: 11px;
+  margin: 2px 0px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.footer ul li {
+  display: inline;
+  /* font-size: 10px; */
+  margin-right: 10px;
+}
