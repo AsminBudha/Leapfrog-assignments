@@ -74,11 +74,6 @@
   margin-right: 5px;
 }
 
-.sidebar {
-  width: 194px;
-  background-color: #f5f5f5;
-}
-
 .main ul li {
   list-style: none;
   padding: 10px 0px;
@@ -103,4 +98,77 @@
 
 .right-sidebar li {
   padding: 12px 0px;
+}
+
+.main-content .entries {
+  margin-top: 6px;
+}
+
+.entries-nav {
+  width: 100%;
+  border-bottom: 2px solid #2fc1da;
+}
+
+.entries-nav-items {
+  position: relative;
+}
+
+.entries-nav-items .heading {
+  text-align: center;
+  margin-top: 9px;
+}
+
+.left-nav {
+  width: 257px;
+  height: 66px;
+  background: url('../images/Left\ Rounded\ Corner.png');
+}
+
+.right-nav {
+  width: 257px;
+  height: 66px;
+  background: url('../images/Right\ Rounded\ Corner.png');
+}
+
+.nav-link-container {
+  width: 238px;
+  height: 28px;
+  position: absolute;
+  bottom: 0;
+  left: 9px;
+}
+
+.nav-link {
+  width: 115px;
+  height: 28px;
+  background: url('../images/Gray-button.png');
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-link-container .active {
+  background: url('../images/Blue-button.png');
+  color: white;
+}
+
+.nav-link div {
+  margin-top: 6px;
+  top: 5px;
+  text-align: center;
+}
+
+.post {
+  width: 100%;
+  /* padding: 15px 0px; */
+  padding: 13px 0px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.post div:first-child {
+  margin-right: 8px;
+}
+
+.post p {
+  font-size: 11px;
+  margin: 2px 0px;
 }
