@@ -7,7 +7,7 @@
   height: 12px;
   padding: 9px;
   border: none;
-  background: url('../images/Search\ Bar.png');
+  background: url('../images/Search-Bar.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -24,7 +24,7 @@
   font-size: 12px;
   /* padding: 10px; */
   color: white;
-  background: url('../images/Search\ Button.png');
+  background: url('../images/Search-Button.png');
   background-repeat: no-repeat;
   background-position: center;
 }
