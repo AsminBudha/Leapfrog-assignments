@@ -18,7 +18,7 @@ const data = [
     id: 3,
     title: 'TuTangle-A Home Search',
     sourceCode:
-      'https://github.com/Leapfrog-assignments/tree/master/design/a-home-search',
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/a-home-search',
     liveDemo: './design/a-home-search',
     type: 'html5',
   },
