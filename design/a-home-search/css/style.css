@@ -21,7 +21,7 @@
   height: 24px;
   font-weight: bold;
   border: none;
-  font-size: 12px;
+  font-size: 10px;
   /* padding: 10px; */
   color: white;
   background: url('../images/Search-Button.png');
@@ -54,12 +54,11 @@
 
 .nav ul li {
   display: inline;
-  font-weight: bold;
 }
 
 .nav-menu li {
-  margin: 8px;
-  letter-spacing: 1px;
+  margin-right: 26px;
+  margin-left: 11px;
 }
 
 .nav-menu li:hover {
@@ -82,12 +81,14 @@
   margin-right: 5px;
 }
 
+.notification span {
+  position: relative;
+  bottom: 2px;
+}
+
 .main ul li {
   list-style: none;
   padding: 10px 13px;
-  letter-spacing: -1px;
-  font-weight: bold;
-  line-height: 14px;
 }
 
 .main ul li:hover {
@@ -102,7 +103,7 @@
 .list-heading {
   color: #ffffff;
   background-color: #2fc1da;
-  padding: 11px 0px;
+  padding: 12px 0px;
 }
 
 .list-heading h2 {
@@ -135,13 +136,13 @@
 .left-nav {
   width: 257px;
   height: 66px;
-  background: url('../images/Left\ Rounded\ Corner.png');
+  background: url('../images/Left-Rounded-Corner.png');
 }
 
 .right-nav {
   width: 257px;
   height: 66px;
-  background: url('../images/Right\ Rounded\ Corner.png');
+  background: url('../images/Right-Rounded-Corner.png');
 }
 
 .nav-link-container {
@@ -179,8 +180,7 @@
 
 .post {
   width: 100%;
-  /* padding: 15px 0px; */
-  padding: 13px 0px;
+  padding: 14px 0px;
   border-bottom: 1px solid #d8d8d8;
 }
 
