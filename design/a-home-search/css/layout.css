@@ -1,3 +1,7 @@
+.main-container-wrapper {
+  min-width: 1002px;
+}
+
 .container {
   width: 939px;
   margin: 0 auto;
