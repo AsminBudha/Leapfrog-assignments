@@ -45,6 +45,17 @@
   font-weight: bold;
 }
 
+.user-info ul li {
+  display: inline-block;
+  border-right: 2px solid black;
+  padding: 0px 4px;
+}
+
+.user-info ul li:last-child {
+  border: none;
+  padding: 0;
+}
+
 .user-info span:hover {
   cursor: pointer;
 }
@@ -55,7 +66,7 @@
 }
 
 .nav ul li {
-  display: inline;
+  display: inline-block;
 }
 
 .nav-menu li {
@@ -187,6 +198,15 @@
   border-bottom: 1px solid #d8d8d8;
 }
 
+.post a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.post a:hover {
+  border-bottom: 1px solid #000000;
+}
+
 .post div:first-child {
   margin-right: 8px;
 }
@@ -205,11 +225,17 @@
 }
 
 .footer ul li {
-  display: inline;
-  /* font-size: 10px; */
-  /* margin-right: 10px; */
+  display: inline-block;
 }
 
 .dots {
   margin: 0px 7px;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  border-bottom: 1px solid #ffffff;
 }
