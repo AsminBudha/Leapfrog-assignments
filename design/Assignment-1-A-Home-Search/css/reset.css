@@ -72,3 +72,8 @@ li a {
 li a:hover {
   border-bottom: 1px solid black;
 }
+
+.sidebar li a:hover,
+.right-sidebar li a:hover {
+  border-bottom: none;
+}

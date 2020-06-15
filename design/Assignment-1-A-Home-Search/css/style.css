@@ -176,13 +176,23 @@
 
 .nav-link:hover {
   cursor: pointer;
-  background: url('../images/Blue-button.png');
-  color: white;
+  background: url('../images/Blue-button-hover.png');
+  color: #ffffff;
 }
 
 .nav-link-container .active {
   background: url('../images/Blue-button.png');
-  color: white;
+  color: #ffffff;
+}
+
+.nav-link-container a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-link-container .active a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .nav-link div {
