@@ -16,10 +16,10 @@ const data = [
   },
   {
     id: 3,
-    title: 'TuTangle-A Home Search',
+    title: 'TuTangle - A Home Search',
     sourceCode:
-      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/a-home-search',
-    liveDemo: './design/a-home-search',
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/Assignment-1-A-Home-Search',
+    liveDemo: './design/Assignment-1-A-Home-Search',
     type: 'html5',
   },
 ]

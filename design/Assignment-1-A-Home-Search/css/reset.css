@@ -13,6 +13,10 @@ h2 {
   font-size: 14px;
 }
 
+.posts h2:hover {
+  color: #2f9eb1;
+}
+
 h4 {
   font-size: 13px;
 }
@@ -58,4 +62,18 @@ body {
 
 .link:hover {
   cursor: pointer;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+li a:hover {
+  border-bottom: 1px solid black;
+}
+
+.sidebar li a:hover,
+.right-sidebar li a:hover {
+  border-bottom: none;
 }
