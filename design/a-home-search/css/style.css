@@ -43,6 +43,10 @@
   font-weight: bold;
 }
 
+.user-info span:hover {
+  cursor: pointer;
+}
+
 .nav {
   background: #f5f5f5;
   padding: 12px 0px;
@@ -56,6 +60,10 @@
 .nav-menu li {
   margin: 8px;
   letter-spacing: 1px;
+}
+
+.nav-menu li:hover {
+  cursor: pointer;
 }
 
 .nav .notification {
@@ -185,6 +193,10 @@
   margin: 2px 0px;
 }
 
+.post h2:hover {
+  cursor: pointer;
+}
+
 .footer {
   font-size: 10px;
 }
@@ -192,5 +204,9 @@
 .footer ul li {
   display: inline;
   /* font-size: 10px; */
-  margin-right: 10px;
+  /* margin-right: 10px; */
+}
+
+.dots {
+  margin: 0px 7px;
 }
