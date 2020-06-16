@@ -22,4 +22,11 @@ const data = [
     liveDemo: './design/Assignment-1-A-Home-Search',
     type: 'html5',
   },
+  {
+    id: 4,
+    title: 'Tutangle - Responsive',
+    sourceCode: 'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/Assignment-2-Responsive-Tutangle',
+    liveDemo: './design/Assignment-2-Responsive-Tutangle',
+    type: "html5"
+  }
 ]
