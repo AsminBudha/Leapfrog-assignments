@@ -1,0 +1,24 @@
+.main-container-wrapper {
+  width: 100vw;
+}
+
+.container {
+  max-width: 1203px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+header {
+  background: url('../images/banner-img.png');
+  background-repeat: no-repeat;
+}
+
+.contact {
+  background-color: #424242;
+}
+
+@media (min-width: 1200px) {
+  header {
+    height: 693px;
+  }
+}
