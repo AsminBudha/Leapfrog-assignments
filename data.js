@@ -25,8 +25,17 @@ const data = [
   {
     id: 4,
     title: 'Tutangle - Responsive',
-    sourceCode: 'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/Assignment-2-Responsive-Tutangle',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/Assignment-2-Responsive-Tutangle',
     liveDemo: './design/Assignment-2-Responsive-Tutangle',
-    type: "html5"
-  }
+    type: 'html5',
+  },
+  {
+    id: 5,
+    title: 'Design Contest - Final Project',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/final-project',
+    liveDemo: './design/final-project',
+    type: 'html5',
+  },
 ]
