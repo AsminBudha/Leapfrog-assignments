@@ -124,10 +124,12 @@ nav a:focus {
 .about {
   text-align: center;
   text-transform: uppercase;
+  padding: 30px 0px;
 }
 
 .about p {
   text-transform: none;
+  margin: 20px 0px;
 }
 
 .about ul {
@@ -198,10 +200,20 @@ nav a:focus {
   }
 
   /* ABOUT SECTION */
+  .about {
+    padding: 50px 0px;
+  }
+
   .categories li {
     float: left;
-    width: 30.75%;
+    width: 50%;
+    height: 230px;
     padding: 0px;
+    margin-bottom: 10px;
+  }
+
+  .categories li:nth-child(even) {
+    float: right;
   }
 
   .category-image {
@@ -250,4 +262,35 @@ nav a:focus {
   }
 
   /* ABOUT SECTION */
+  .about {
+    padding-top: 85px;
+    padding-bottom: 65px;
+  }
+
+  .about p {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .about button {
+    margin-top: 40px;
+  }
+
+  .categories li {
+    width: 30.75%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .categories li:nth-child(3n) {
+    margin-right: 0px;
+  }
+
+  .categories li:nth-child(n + 4) {
+    margin-bottom: 0px;
+  }
+
+  .categories li:nth-child(even) {
+    float: left;
+  }
 }
