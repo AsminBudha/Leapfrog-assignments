@@ -148,6 +148,25 @@ nav a:focus {
   background-color: #f7f7f7;
 }
 
+/* COUNTER SECTION */
+
+.counter {
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.counter-header {
+  font-size: 30px;
+}
+
+.counter li {
+  list-style-type: none;
+  margin: 20px 0px;
+}
+
 @media (min-width: 768px) {
   /* CONTACT SECTION */
   header,
@@ -226,6 +245,19 @@ nav a:focus {
     padding-top: 50px;
     padding-bottom: 20px;
   }
+
+  /* COUNTER */
+  .counter-header {
+    font-size: 40px;
+  }
+
+  .counter li {
+    width: 50%;
+    float: left;
+  }
+  .counter li:nth-child(even) {
+    float: right;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -297,6 +329,19 @@ nav a:focus {
   }
 
   .categories li:nth-child(even) {
+    float: left;
+  }
+
+  /* COUNTER */
+  .counter {
+    padding-top: 55px;
+    padding-bottom: 85px;
+  }
+  .counter li {
+    width: 25%;
+    margin: 0;
+  }
+  .counter li:nth-child(even) {
     float: left;
   }
 }
