@@ -3,7 +3,7 @@
 /* CONTACT SECTION */
 header,
 .contact {
-  font-size: 14px;
+  font-size: 11px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -46,6 +46,7 @@ nav {
 }
 
 nav .logo {
+  display: block;
   float: left;
 }
 
@@ -149,6 +150,11 @@ nav a:focus {
 
 @media (min-width: 768px) {
   /* CONTACT SECTION */
+  header,
+  .contact {
+    font-size: 14px;
+  }
+
   .contact ul:first-child {
     float: left;
     margin-bottom: 0px;
