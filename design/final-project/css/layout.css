@@ -22,3 +22,9 @@ header {
     height: 693px;
   }
 }
+
+@media (min-width: 1920px) {
+  header {
+    background-size: cover;
+  }
+}
