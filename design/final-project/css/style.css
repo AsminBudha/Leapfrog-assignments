@@ -148,6 +148,65 @@ nav a:focus {
   background-color: #f7f7f7;
 }
 
+/* COUNTER SECTION */
+
+.counter {
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.counter-header {
+  font-size: 30px;
+}
+
+.counter li {
+  list-style-type: none;
+  margin: 20px 0px;
+}
+
+.counter img {
+  margin: 20px 0px;
+}
+
+/* GRAPHIC DESIGN */
+.graphics-design {
+  padding: 30px 0px;
+}
+
+.graphics-design .heading {
+  text-align: center;
+}
+
+.graphics-design .video {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.graphics-design ul {
+  list-style-type: none;
+}
+
+.graphics-design ul li {
+  margin: 10px 0px;
+}
+
+.graphics-design li i {
+  width: 20%;
+  display: block;
+  float: left;
+  font-size: 24px;
+  margin-top: 3px;
+  color: var(--main-gray);
+}
+
+.graphics-design li div {
+  float: right;
+  width: 80%;
+}
+
 @media (min-width: 768px) {
   /* CONTACT SECTION */
   header,
@@ -226,6 +285,43 @@ nav a:focus {
     padding-top: 50px;
     padding-bottom: 20px;
   }
+
+  /* COUNTER */
+  .counter-header {
+    font-size: 40px;
+  }
+
+  .counter li {
+    width: 50%;
+    float: left;
+  }
+
+  .counter img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .counter li:nth-child(even) {
+    float: right;
+  }
+
+  /* GRAPHICS DESIGN */
+  .graphics-design .content {
+    padding: 0px 50px;
+  }
+
+  .graphics-design ul li {
+    margin-bottom: 40px;
+  }
+  .graphics-design li i {
+    width: 15%;
+    font-size: 40px;
+    margin-top: 3px;
+  }
+
+  .graphics-design li div {
+    width: 85%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -298,5 +394,52 @@ nav a:focus {
 
   .categories li:nth-child(even) {
     float: left;
+  }
+
+  /* COUNTER */
+  .counter {
+    padding-top: 55px;
+    padding-bottom: 85px;
+  }
+  .counter li {
+    width: 25%;
+    margin: 0;
+  }
+  .counter li:nth-child(even) {
+    float: left;
+  }
+
+  /* GRAPHICS DESIGN */
+  .graphics-design {
+    padding: 65px 0px;
+  }
+  .graphics-design .video {
+    float: right;
+    width: 50%;
+  }
+
+  .graphics-design .heading p {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .graphics-design .text {
+    width: 50%;
+    float: left;
+    padding: 0px;
+  }
+
+  .graphics-design ul li {
+    margin: 40px 0px;
+  }
+
+  .graphics-design li i {
+    width: 15%;
+    font-size: 44px;
+    margin-top: 3px;
+  }
+
+  .graphics-design li div {
+    width: 85%;
   }
 }
