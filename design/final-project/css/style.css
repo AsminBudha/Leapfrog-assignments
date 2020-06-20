@@ -213,7 +213,7 @@ nav a:focus {
   background-color: #f7f7f7;
 }
 
-.examples .buttons button {
+.chevron-buttons button {
   padding: 10px;
   border: none;
   background-color: var(--black);
@@ -221,8 +221,8 @@ nav a:focus {
   cursor: pointer;
 }
 
-.examples .buttons button:hover,
-.examples .buttons button:focus {
+.chevron-buttons button:hover,
+.chevron-buttons button:focus {
   background-color: var(--theme-color);
 }
 
@@ -237,6 +237,51 @@ nav a:focus {
 
 .examples .banner-button {
   text-align: center;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+  text-align: center;
+}
+
+.testimonials-content {
+  margin: 20px 0px;
+}
+
+.testimonial {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.testimonial-text {
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 55px;
+  background-image: url(../images/testimonial.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.testimonial .rating {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.testimonial .rating span:last-child {
+  margin-left: 20px;
+  color: var(--theme-color);
+}
+
+.gray-star {
+  color: var(--main-gray);
+}
+
+.testimonial-writer {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -368,6 +413,25 @@ nav a:focus {
     width: 25%;
     float: left;
   }
+
+  /* TESTIMONIAL */
+  .testimonial {
+    margin: 0px;
+    width: 48%;
+    float: left;
+  }
+
+  .testimonial:last-child {
+    float: right;
+  }
+
+  .testimonials .section-title p {
+    margin-top: 20px;
+  }
+
+  .testimonials-content {
+    margin: 25px 0px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -494,7 +558,16 @@ nav a:focus {
     margin: 80px 0px;
   }
 
+  .examples .chevron-buttons {
+    float: right;
+  }
+
   .examples .banner-button button {
     margin: 0px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-content {
+    margin: 55px 0px;
   }
 }
