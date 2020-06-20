@@ -13,9 +13,20 @@ header {
   background-color: #424242;
 }
 
+.examples {
+  padding: 30px 0px;
+}
+
+@media (min-width: 768px) {
+}
+
 @media (min-width: 1200px) {
   header {
     height: 693px;
+  }
+
+  .examples {
+    padding: 80px 0px;
   }
 }
 
