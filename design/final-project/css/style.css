@@ -207,6 +207,38 @@ nav a:focus {
   width: 80%;
 }
 
+/* EXAMPLES SECTION */
+.examples {
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+}
+
+.examples .buttons button {
+  padding: 10px;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.examples .buttons button:hover,
+.examples .buttons button:focus {
+  background-color: var(--theme-color);
+}
+
+.examples .gallery {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.examples .gallery img {
+  width: 100%;
+}
+
+.examples .banner-button {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   /* CONTACT SECTION */
   header,
@@ -321,6 +353,20 @@ nav a:focus {
 
   .graphics-design li div {
     width: 85%;
+  }
+
+  /* EXAMPLES SECTION */
+  .header h2 {
+    float: left;
+  }
+
+  .header .buttons {
+    float: right;
+  }
+
+  .examples .gallery div {
+    width: 25%;
+    float: left;
   }
 }
 
@@ -441,5 +487,14 @@ nav a:focus {
 
   .graphics-design li div {
     width: 85%;
+  }
+
+  /* EXAMPLES SECTION */
+  .examples .gallery {
+    margin: 80px 0px;
+  }
+
+  .examples .banner-button button {
+    margin: 0px;
   }
 }
