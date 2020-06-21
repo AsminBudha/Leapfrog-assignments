@@ -284,6 +284,51 @@ nav a:focus {
   text-transform: uppercase;
 }
 
+/* PARTNERS SECTION */
+.partners {
+  text-align: center;
+}
+
+.partners .partner {
+  margin: 20px 0px;
+}
+
+/* OFFER SECTION */
+.offer {
+  text-transform: uppercase;
+}
+
+.offer p {
+  color: #666666;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.offer form {
+  margin: 10px 0;
+}
+.offer input {
+  border-radius: 0;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.offer input:focus {
+  outline: none;
+}
+
+.offer button {
+  margin-top: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border: none;
+  background: var(--theme-color);
+  color: var(--white);
+}
+
 @media (min-width: 768px) {
   /* CONTACT SECTION */
   header,
@@ -432,6 +477,35 @@ nav a:focus {
   .testimonials-content {
     margin: 25px 0px;
   }
+
+  /* PARTNERS SECTION */
+
+  /* OFFER SECTION */
+  .offer .heading {
+    width: 40%;
+    float: left;
+  }
+
+  .offer form {
+    width: 60%;
+    float: right;
+  }
+
+  .offer input {
+    width: 59%;
+    float: left;
+    padding: 9px;
+  }
+  .offer button {
+    float: right;
+    margin: 0px;
+    width: 40%;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border: none;
+    background: var(--theme-color);
+    color: var(--white);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -569,5 +643,30 @@ nav a:focus {
   /* TESTIMONIALS */
   .testimonials-content {
     margin: 55px 0px;
+  }
+
+  /* PARTNERS SECTION */
+  .partners .partner {
+    margin: 0px;
+    width: 20%;
+    float: left;
+    vertical-align: middle;
+  }
+
+  /* OFFER SECTION */
+  .offer form {
+    margin: 0px;
+  }
+
+  .offer input {
+    width: 73%;
+    float: left;
+    padding: 19px;
+  }
+  .offer button {
+    margin: 0px;
+    width: 25%;
+    text-transform: uppercase;
+    padding: 20px 50px;
   }
 }

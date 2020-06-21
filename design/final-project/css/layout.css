@@ -14,11 +14,20 @@ header {
 }
 
 .examples,
-.testimonials {
+.testimonials,
+.offer {
   padding: 30px 0px;
 }
 
+.partners {
+  padding: 15px 0;
+  background: #f7f7f7;
+}
+
 @media (min-width: 768px) {
+  .offer {
+    padding: 40px 0px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -29,6 +38,11 @@ header {
   .examples,
   .testimonials {
     padding: 85px 0px;
+  }
+
+  .offer {
+    padding-top: 45px;
+    padding-bottom: 85px;
   }
 }
 
