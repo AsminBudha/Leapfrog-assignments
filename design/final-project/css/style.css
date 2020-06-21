@@ -329,6 +329,112 @@ nav a:focus {
   color: var(--white);
 }
 
+/* FOOTER SECTION */
+footer {
+  font-size: 14px;
+}
+footer .container {
+  position: relative;
+}
+
+footer .goto-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  background: var(--theme-color);
+  padding: 15px;
+  color: #ffffff;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 30px 0px;
+}
+
+footer .social-media-links li {
+  float: left;
+  list-style-type: none;
+  margin-right: 10px;
+  border: 1px solid var(--main-gray);
+}
+
+.social-media-links a {
+  display: inline-block;
+  color: var(--main-gray);
+  padding: 8px 12px;
+}
+
+.social-media-links a:hover {
+  color: #ffffff;
+}
+
+footer .social-media-links li:hover {
+  background-color: var(--theme-color);
+}
+
+footer ul:nth-child(n + 2) {
+  margin-top: 30px;
+  list-style: none;
+}
+
+footer ul:nth-child(n + 2) li {
+  border-bottom: 1px solid var(--main-gray);
+}
+
+footer ul:nth-child(n + 2) a {
+  display: inline-block;
+  padding: 13px 0px;
+  text-decoration: none;
+  color: #666666;
+}
+
+footer ul:nth-child(n + 2) a:hover,
+footer ul:nth-child(n + 2) a:focus {
+  color: var(--theme-color);
+}
+
+footer ul:nth-child(n + 2) i {
+  margin-right: 20px;
+}
+
+footer .column input,
+footer .column button {
+  width: 100%;
+}
+
+footer .column input {
+  border: 1px solid var(--main-gray);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+footer input:focus {
+  outline: none;
+}
+
+footer .column button {
+  background: var(--theme-color);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+}
+
+/* COPYRIGHT SECTION */
+.copyright ul {
+  list-style-type: none;
+}
+
+.copyright li {
+  margin: 10px 0px;
+}
+
+.copyright a {
+  color: var(--white);
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   /* CONTACT SECTION */
   header,
@@ -506,6 +612,20 @@ nav a:focus {
     background: var(--theme-color);
     color: var(--white);
   }
+
+  /* COPYRIGHT SECTION */
+  .copyright-text {
+    float: left;
+  }
+
+  .copyright ul {
+    float: right;
+  }
+
+  .copyright ul li {
+    float: left;
+    margin: 0px 10px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -668,5 +788,14 @@ nav a:focus {
     width: 25%;
     text-transform: uppercase;
     padding: 20px 50px;
+  }
+
+  /* FOOTER */
+  footer .column input {
+    padding: 20px;
+  }
+
+  footer .column button {
+    padding: 20px;
   }
 }
