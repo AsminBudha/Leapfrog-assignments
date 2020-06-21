@@ -4,6 +4,19 @@
   padding: 15px;
 }
 
+.nav-small-screen {
+  position: relative;
+  position: fixed;
+  padding: 20px 0px;
+  top: 0;
+  right: 0;
+  width: 80%;
+  min-height: 100%;
+  background-color: #424242;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
 header {
   background: url('../images/banner-img.png');
   background-repeat: no-repeat;
@@ -68,6 +81,10 @@ footer .container {
   .examples,
   .testimonials {
     padding: 85px 0px;
+  }
+
+  .nav-small-screen {
+    display: none;
   }
 
   .offer {
