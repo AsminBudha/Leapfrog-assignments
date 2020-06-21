@@ -213,7 +213,7 @@ nav a:focus {
   background-color: #f7f7f7;
 }
 
-.examples .buttons button {
+.chevron-buttons button {
   padding: 10px;
   border: none;
   background-color: var(--black);
@@ -221,8 +221,8 @@ nav a:focus {
   cursor: pointer;
 }
 
-.examples .buttons button:hover,
-.examples .buttons button:focus {
+.chevron-buttons button:hover,
+.chevron-buttons button:focus {
   background-color: var(--theme-color);
 }
 
@@ -237,6 +237,202 @@ nav a:focus {
 
 .examples .banner-button {
   text-align: center;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+  text-align: center;
+}
+
+.testimonials-content {
+  margin: 20px 0px;
+}
+
+.testimonial {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.testimonial-text {
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 55px;
+  background-image: url(../images/testimonial.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.testimonial .rating {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.testimonial .rating span:last-child {
+  margin-left: 20px;
+  color: var(--theme-color);
+}
+
+.gray-star {
+  color: var(--main-gray);
+}
+
+.testimonial-writer {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* PARTNERS SECTION */
+.partners {
+  text-align: center;
+}
+
+.partners .partner {
+  margin: 20px 0px;
+}
+
+/* OFFER SECTION */
+.offer {
+  text-transform: uppercase;
+}
+
+.offer p {
+  color: #666666;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.offer form {
+  margin: 10px 0;
+}
+.offer input {
+  border-radius: 0;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.offer input:focus {
+  outline: none;
+}
+
+.offer button {
+  margin-top: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border: none;
+  background: var(--theme-color);
+  color: var(--white);
+}
+
+/* FOOTER SECTION */
+footer {
+  font-size: 14px;
+}
+footer .container {
+  position: relative;
+}
+
+footer .goto-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  background: var(--theme-color);
+  padding: 15px;
+  color: #ffffff;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 30px 0px;
+}
+
+footer .social-media-links li {
+  float: left;
+  list-style-type: none;
+  margin-right: 10px;
+  border: 1px solid var(--main-gray);
+}
+
+.social-media-links a {
+  display: inline-block;
+  color: var(--main-gray);
+  padding: 8px 12px;
+}
+
+.social-media-links a:hover {
+  color: #ffffff;
+}
+
+footer .social-media-links li:hover {
+  background-color: var(--theme-color);
+}
+
+footer ul:nth-child(n + 2) {
+  margin-top: 30px;
+  list-style: none;
+}
+
+footer ul:nth-child(n + 2) li {
+  border-bottom: 1px solid var(--main-gray);
+}
+
+footer ul:nth-child(n + 2) a {
+  display: inline-block;
+  padding: 13px 0px;
+  text-decoration: none;
+  color: #666666;
+}
+
+footer ul:nth-child(n + 2) a:hover,
+footer ul:nth-child(n + 2) a:focus {
+  color: var(--theme-color);
+}
+
+footer ul:nth-child(n + 2) i {
+  margin-right: 20px;
+}
+
+footer .column input,
+footer .column button {
+  width: 100%;
+}
+
+footer .column input {
+  border: 1px solid var(--main-gray);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+footer input:focus {
+  outline: none;
+}
+
+footer .column button {
+  background: var(--theme-color);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+}
+
+/* COPYRIGHT SECTION */
+.copyright ul {
+  list-style-type: none;
+}
+
+.copyright li {
+  margin: 10px 0px;
+}
+
+.copyright a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -368,6 +564,68 @@ nav a:focus {
     width: 25%;
     float: left;
   }
+
+  /* TESTIMONIAL */
+  .testimonial {
+    margin: 0px;
+    width: 48%;
+    float: left;
+  }
+
+  .testimonial:last-child {
+    float: right;
+  }
+
+  .testimonials .section-title p {
+    margin-top: 20px;
+  }
+
+  .testimonials-content {
+    margin: 25px 0px;
+  }
+
+  /* PARTNERS SECTION */
+
+  /* OFFER SECTION */
+  .offer .heading {
+    width: 40%;
+    float: left;
+  }
+
+  .offer form {
+    width: 60%;
+    float: right;
+  }
+
+  .offer input {
+    width: 59%;
+    float: left;
+    padding: 9px;
+  }
+  .offer button {
+    float: right;
+    margin: 0px;
+    width: 40%;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border: none;
+    background: var(--theme-color);
+    color: var(--white);
+  }
+
+  /* COPYRIGHT SECTION */
+  .copyright-text {
+    float: left;
+  }
+
+  .copyright ul {
+    float: right;
+  }
+
+  .copyright ul li {
+    float: left;
+    margin: 0px 10px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -494,7 +752,50 @@ nav a:focus {
     margin: 80px 0px;
   }
 
+  .examples .chevron-buttons {
+    float: right;
+  }
+
   .examples .banner-button button {
     margin: 0px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-content {
+    margin: 55px 0px;
+  }
+
+  /* PARTNERS SECTION */
+  .partners .partner {
+    margin: 0px;
+    width: 20%;
+    float: left;
+    vertical-align: middle;
+  }
+
+  /* OFFER SECTION */
+  .offer form {
+    margin: 0px;
+  }
+
+  .offer input {
+    width: 73%;
+    float: left;
+    padding: 19px;
+  }
+  .offer button {
+    margin: 0px;
+    width: 25%;
+    text-transform: uppercase;
+    padding: 20px 50px;
+  }
+
+  /* FOOTER */
+  footer .column input {
+    padding: 20px;
+  }
+
+  footer .column button {
+    padding: 20px;
   }
 }
