@@ -38,4 +38,12 @@ const data = [
     liveDemo: './design/final-project',
     type: 'html5',
   },
-]
+  {
+    id: 6,
+    title: 'JavaScript Exercise 1 - 5',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/basics',
+    liveDemo: './javascript/basics',
+    type: 'js-square'
+  },
+];
