@@ -4,7 +4,7 @@ const data = [
     title: 'Card Design',
     sourceCode:
       'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/card-design',
-    liveDemo: './design/card-design',
+    liveDemo: 'design/card-design',
     type: 'html5',
   },
   {
@@ -19,7 +19,7 @@ const data = [
     title: 'TuTangle - A Home Search',
     sourceCode:
       'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/Assignment-1-A-Home-Search',
-    liveDemo: './design/Assignment-1-A-Home-Search',
+    liveDemo: 'design/Assignment-1-A-Home-Search',
     type: 'html5',
   },
   {
@@ -27,7 +27,7 @@ const data = [
     title: 'Tutangle - Responsive',
     sourceCode:
       'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/Assignment-2-Responsive-Tutangle',
-    liveDemo: './design/Assignment-2-Responsive-Tutangle',
+    liveDemo: 'design/Assignment-2-Responsive-Tutangle',
     type: 'html5',
   },
   {
@@ -35,15 +35,31 @@ const data = [
     title: 'Design Contest - Final Project',
     sourceCode:
       'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/design/final-project',
-    liveDemo: './design/final-project',
+    liveDemo: 'design/final-project',
     type: 'html5',
   },
   {
     id: 6,
-    title: 'JavaScript Exercise 1 - 5',
+    title: 'JavaScript Exercise 2 - 6',
     sourceCode:
       'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/basics',
-    liveDemo: './javascript/basics',
-    type: 'js-square'
+    liveDemo: 'javascript/basics',
+    type: 'js-square',
+  },
+  {
+    id: 7,
+    title: 'JavaScript Exercise 8: Scatter Plot',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/scatter-plot',
+    liveDemo: 'javascript/scatter-plot',
+    type: 'js-square',
+  },
+  {
+    id: 8,
+    title: 'JavaScript Exercise 9: Ball Animation',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/ball-animation',
+    liveDemo: 'javascript/ball-animation',
+    type: 'js-square',
   },
 ];
