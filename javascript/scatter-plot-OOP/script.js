@@ -9,13 +9,13 @@ class Point {
 
   styleElement() {
     const pointStyles = {
-      height: '20px',
-      width: '20px',
+      height: '15px',
+      width: '15px',
       borderRadius: '50%',
       backgroundColor: this.color,
       position: 'absolute',
-      top: this.y - 10 + 'px',
-      left: this.x - 10 + 'px',
+      top: this.y - 7.5 + 'px',
+      left: this.x - 7.5 + 'px',
       zIndex: 2,
     };
 
@@ -23,7 +23,7 @@ class Point {
   }
 
   setColor() {
-    this.color = '#C1292E';
+    this.color = '#AD343E';
   }
 
   attachMouseListeners() {
@@ -32,7 +32,7 @@ class Point {
       height: '40px',
       width: '40px',
       borderRadius: '50%',
-      backgroundColor: this.color + '99',
+      backgroundColor: this.color + '55',
       position: 'absolute',
       top: this.y - 20 + 'px',
       left: this.x - 20 + 'px',
