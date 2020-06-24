@@ -40,7 +40,7 @@ const data = [
   },
   {
     id: 6,
-    title: 'JavaScript Exercise 2 - 6',
+    title: 'JavaScript Exercise 2 - 7',
     sourceCode:
       'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/basics',
     liveDemo: 'javascript/basics',
@@ -60,6 +60,14 @@ const data = [
     sourceCode:
       'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/ball-animation',
     liveDemo: 'javascript/ball-animation',
+    type: 'js-square',
+  },
+  {
+    id: 9,
+    title: 'Scatter Plot using OOP',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/scatter-plot-OOP',
+    liveDemo: 'javascript/scatter-plot-OOP',
     type: 'js-square',
   },
 ];
