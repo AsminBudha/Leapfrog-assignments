@@ -70,4 +70,12 @@ const data = [
     liveDemo: 'javascript/scatter-plot-OOP',
     type: 'js-square',
   },
+  {
+    id: 10,
+    title: 'Ball Animation using OOP',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/ball-animation-OOP',
+    liveDemo: 'javascript/ball-animation-OOP',
+    type: 'js-square',
+  },
 ];
