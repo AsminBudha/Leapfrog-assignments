@@ -40,6 +40,12 @@ function slide() {
 }
 
 /**
+ * set width of img-container dynamically
+ */
+
+_('.img-container').style.width = IMG_WIDTH * TOTAL_CAROUSEL_ITEMS + 'px';
+
+/**
  * Create and insert controls
  */
 
@@ -73,21 +79,35 @@ for (var i = 0; i < TOTAL_CAROUSEL_ITEMS; i++) {
 /**
  * Event listeners for sliding images
  */
+
+function addSelectedClass() {
+  var carouselDots = __('.carousel-dot');
+  carouselDots.forEach(function (element, index) {
+    if (index === selected) element.classList.add('selected');
+    else element.classList.remove('selected');
+  });
+}
+
 leftButton.addEventListener('click', function () {
   if (selected === 0) selected = TOTAL_CAROUSEL_ITEMS - 1;
   else selected--;
 
   slide();
+  addSelectedClass();
 });
 
 rightButton.addEventListener('click', function () {
   selected = (selected + 1) % TOTAL_CAROUSEL_ITEMS;
   slide();
+  addSelectedClass();
 });
 
 __('.carousel-dot').forEach(function (dot, index) {
   dot.addEventListener('click', function () {
     selected = index;
     slide();
+    addSelectedClass();
   });
 });
+
+addSelectedClass();
