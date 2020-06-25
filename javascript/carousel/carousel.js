@@ -81,10 +81,11 @@ for (var i = 0; i < TOTAL_CAROUSEL_ITEMS; i++) {
  */
 
 function addSelectedClass() {
-  for (var i = 0; i < TOTAL_CAROUSEL_ITEMS; i++) {
-    if (selected === i) carouselDot.classList.add('selected');
-    else carouselDot.classList.remove('selected');
-  }
+  var carouselDots = __('.carousel-dot');
+  carouselDots.forEach(function (element, index) {
+    if (index === selected) element.classList.add('selected');
+    else element.classList.remove('selected');
+  });
 }
 
 leftButton.addEventListener('click', function () {
@@ -103,9 +104,9 @@ rightButton.addEventListener('click', function () {
 
 __('.carousel-dot').forEach(function (dot, index) {
   dot.addEventListener('click', function () {
-    addSelectedClass();
     selected = index;
     slide();
+    addSelectedClass();
   });
 });
 
