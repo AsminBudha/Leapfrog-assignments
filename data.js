@@ -78,4 +78,12 @@ const data = [
     liveDemo: 'javascript/ball-animation-OOP',
     type: 'js-square',
   },
+  {
+    id: 11,
+    title: 'Carousel',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/carousel',
+    liveDemo: 'javascript/carousel',
+    type: 'js-square',
+  },
 ];

@@ -1,0 +1,30 @@
+.carousel-container {
+  width: 700px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container {
+  width: 2100px;
+  position: absolute;
+}
+
+.img-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.carousel-item {
+  float: left;
+}
+
+.carousel-item img {
+  width: 700px;
+}
+
+span {
+  font-size: 50px;
+  font-weight: 900;
+}
