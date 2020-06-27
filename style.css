@@ -17,10 +17,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #e7e7e7;
-  width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   font-size: 18px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
