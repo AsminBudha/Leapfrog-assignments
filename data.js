@@ -86,4 +86,12 @@ const data = [
     liveDemo: 'javascript/carousel',
     type: 'js-square',
   },
+  {
+    id: 12,
+    title: 'Carousel-OOP',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/carousel-OOP',
+    liveDemo: 'javascript/carousel-OOP',
+    type: 'js-square',
+  },
 ];
