@@ -170,6 +170,22 @@ function Carousel(containerSelector, speed, delay) {
     );
   };
 
+  this.setContainerHeight = function () {
+    window.addEventListener(
+      'load',
+      function () {
+        var imageHeights = Array.from(__(containerSelector + ' img')).map(
+          function (image) {
+            return parseInt(window.getComputedStyle(image).height);
+          }
+        );
+
+        this.container.style.height = Math.min.apply(null, imageHeights) + 'px';
+      }.bind(this)
+    );
+  };
+
   this.initializeCarouselElements();
+  this.setContainerHeight();
   this.makeDelay();
 }
