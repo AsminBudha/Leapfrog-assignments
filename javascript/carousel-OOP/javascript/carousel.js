@@ -21,7 +21,7 @@ var __ = function (selector) {
  * @param {number} delay
  * A constructor function to create carousel object
  */
-function Carousel(containerSelector, speed, delay = 5) {
+function Carousel(containerSelector, speed, delay) {
   this.container = _(containerSelector);
   this.imageContainer = this.container.querySelector('.img-container');
   this.imageWidth = parseInt(
@@ -33,10 +33,14 @@ function Carousel(containerSelector, speed, delay = 5) {
   this.delay = delay * 1000;
   this.selected = 0;
   this.position = 0;
-  this.speed = speed;
+  this.speed = this.imageWidth / (speed * 60);
   this.interval = null;
 
-  // Initialize Carousel Elements
+  /**
+   * @returns {undefined}
+   * A function that sets the width of container
+   * and images dynamically
+   */
   this.initializeCarouselElements = function () {
     this.containerWidth = this.imageWidth * this.totalCarouselItems;
     _(containerSelector + ' .img-container').style.width =
@@ -54,9 +58,15 @@ function Carousel(containerSelector, speed, delay = 5) {
     this.addEventListeners();
   };
 
+  /**
+   * @returns {undefined}
+   * A function that slides elements
+   */
   this.slide = function () {
     var startAnimation = window.requestAnimationFrame(this.slide.bind(this));
-    if (this.position === -(this.selected * this.imageWidth)) {
+    if (
+      parseInt(this.position.toFixed(0)) === -(this.selected * this.imageWidth)
+    ) {
       window.cancelAnimationFrame(startAnimation);
     } else if (this.position < -(this.selected * this.imageWidth)) {
       this.position += this.speed;
@@ -67,6 +77,10 @@ function Carousel(containerSelector, speed, delay = 5) {
     this.imageContainer.style.left = this.position + 'px';
   };
 
+  /**
+   * @returns {undefined}
+   * A function that inserts controls in carousel
+   */
   this.insertControls = function () {
     var controls = document.createElement('div');
     var carouselButtons = document.createElement('div');
