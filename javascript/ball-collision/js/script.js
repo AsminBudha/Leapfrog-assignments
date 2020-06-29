@@ -9,7 +9,7 @@ let balls = [];
  */
 function init(totalBalls) {
   for (let i = 0; i < totalBalls; i++) {
-    let radius = randomRange(10, 20);
+    let radius = randomRange(5, 15);
     let x = randomRange(radius, canvas.width - radius);
     let y = randomRange(radius, canvas.height - radius);
     let dx = randomRange(-5, 5);
@@ -20,7 +20,7 @@ function init(totalBalls) {
     if (i !== 0) {
       for (let j = 0; j < i; j++) {
         let d = getDistance(x, y, balls[j].x, balls[j].y);
-        if (d <= radius + balls[j].radius) {
+        if (d <= (radius + balls[j].radius) ** 2) {
           x = randomRange(radius, canvas.width - radius);
           y = randomRange(radius, canvas.height - radius);
           j = -1;
@@ -45,5 +45,5 @@ function animate() {
   balls.forEach((ball) => ball.move());
 }
 
-init(20);
+init(30);
 animate();

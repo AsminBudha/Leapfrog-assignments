@@ -4,14 +4,14 @@ const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-class Ball {
-  constructor(x, y, radius, dx, dy, color) {
+class Ant {
+  constructor(x, y, radius, dx, dy, ant) {
     this.x = x;
     this.y = y;
-    this.radius = radius;
+    this.radius = 16;
     this.dx = dx;
     this.dy = dy;
-    this.color = color;
+    this.ant = ant;
   }
 
   detectEdge = () => {
@@ -42,11 +42,7 @@ class Ball {
   };
 
   draw = () => {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.fill();
-    ctx.closePath();
+    ctx.drawImage(this.ant, this.x - this.radius, this.y - this.radius);
   };
 
   move = () => {
