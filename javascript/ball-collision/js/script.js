@@ -12,11 +12,11 @@ function init(totalBalls) {
     let radius = randomRange(10, 20);
     let x = randomRange(radius, canvas.width - radius);
     let y = randomRange(radius, canvas.height - radius);
-    let dx = randomRange(-10, 10);
-    let dy = randomRange(-10, 10);
+    let dx = randomRange(-5, 5);
+    let dy = randomRange(-5, 5);
     let color = getRandomColor();
 
-    // Detect collision and modify x and y
+    // Detect collision and modify center
     if (i !== 0) {
       for (let j = 0; j < i; j++) {
         let d = getDistance(x, y, balls[j].x, balls[j].y);
