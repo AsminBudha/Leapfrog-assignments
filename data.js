@@ -94,4 +94,12 @@ const data = [
     liveDemo: 'javascript/carousel-OOP',
     type: 'js-square',
   },
+  {
+    id: 13,
+    title: 'Ball Collision',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/ball-collision',
+    liveDemo: 'javascript/ball-collision',
+    type: 'js-square',
+  },
 ];
