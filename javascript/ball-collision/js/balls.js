@@ -5,13 +5,13 @@ canvas.height = 900;
 canvas.width = 1000;
 
 class Ball {
-  constructor(x, y, radius, dx = 5, dy = 5) {
+  constructor(x, y, radius, dx, dy, color) {
     this.x = x;
     this.y = y;
     this.radius = radius;
-    this.color = 'green';
     this.dx = dx;
     this.dy = dy;
+    this.color = color;
   }
 
   detectEdge = () => {

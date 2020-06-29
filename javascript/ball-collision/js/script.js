@@ -1,18 +1,6 @@
 let balls = [];
 
 /**
- * @param {Number} min
- * @param {Number} max
- * @returns {Number}
- *
- * return random number in a range
- */
-
-function randomRange(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
-
-/**
  * @param {Number} totalBalls
  * @returns {undefined}
  *
@@ -26,8 +14,21 @@ function init(totalBalls) {
     let y = randomRange(radius, canvas.height - radius);
     let dx = randomRange(-10, 10);
     let dy = randomRange(-10, 10);
+    let color = getRandomColor();
 
-    let ball = new Ball(x, y, radius, dx, dy);
+    // Detect collision and modify x and y
+    if (i !== 0) {
+      for (let j = 0; j < i; j++) {
+        let d = getDistance(x, y, balls[j].x, balls[j].y);
+        if (d <= radius + balls[j].radius) {
+          x = randomRange(radius, canvas.width - radius);
+          y = randomRange(radius, canvas.height - radius);
+          j = -1;
+        }
+      }
+    }
+
+    let ball = new Ball(x, y, radius, dx, dy, color);
 
     balls.push(ball);
   }
@@ -44,5 +45,5 @@ function animate() {
   balls.forEach((ball) => ball.move());
 }
 
-init(10);
+init(20);
 animate();
