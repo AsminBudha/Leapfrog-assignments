@@ -1,19 +1,19 @@
-let balls = [];
+let ants = [];
 
 /**
- * @param {Number} totalBalls
+ * @param {Number} totalants
  * @returns {undefined}
  *
  * A function to initialize the canvas draw
- * totalBalls number of balls
+ * totalants number of ants
  */
-function init(totalBalls) {
+function init(totalants) {
   const img = new Image();
   img.src =
     'https://prashantacharya.github.io/Leapfrog-assignments/javascript/ant-smasher/images/ant.png';
   img.onload = () => {
-    for (let i = 0; i < totalBalls; i++) {
-      let radius = 10;
+    for (let i = 0; i < totalants; i++) {
+      let radius = 16;
       let x = randomRange(radius, canvas.width - radius);
       let y = randomRange(radius, canvas.height - radius);
       let dx = randomRange(-3, 3);
@@ -22,8 +22,8 @@ function init(totalBalls) {
       // Detect collision and modify center
       if (i !== 0) {
         for (let j = 0; j < i; j++) {
-          let d = getDistance(x, y, balls[j].x, balls[j].y);
-          if (d <= (radius + balls[j].radius) ** 2) {
+          let d = getDistance(x, y, ants[j].x, ants[j].y);
+          if (d <= (radius + ants[j].radius) ** 2) {
             x = randomRange(radius, canvas.width - radius);
             y = randomRange(radius, canvas.height - radius);
             j = -1;
@@ -31,30 +31,30 @@ function init(totalBalls) {
         }
       }
 
-      let ball = new Ant(x, y, radius, dx, dy, img);
+      let ball = new Ant(x, y, dx, dy, img);
 
-      balls.push(ball);
+      ants.push(ball);
     }
   };
 }
 
 /**
  * @returns {undefined}
- * A function that animates the balls in the canvas
+ * A function that animates the ants in the canvas
  */
 function animate() {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  balls.forEach((ball) => ball.move());
+  ants.forEach((ball) => ball.move());
 }
 
 init(30);
 animate();
 
 const destruct = (ant) => {
-  const updatedAnts = balls.filter((items, index) => ant !== index);
-  balls = updatedAnts;
+  const updatedAnts = ants.filter((items, index) => ant !== index);
+  ants = updatedAnts;
 };
 
 canvas.addEventListener('mousedown', (event) => {
@@ -64,8 +64,8 @@ canvas.addEventListener('mousedown', (event) => {
   x -= canvas.offsetLeft;
   y -= canvas.offsetTop;
 
-  for (let i = 0; i < balls.length; i++) {
-    if (getDistance(x, y, balls[i].x, balls[i].y) <= balls[i].radius ** 2) {
+  for (let i = 0; i < ants.length; i++) {
+    if (getDistance(x, y, ants[i].x, ants[i].y) <= ants[i].radius ** 2) {
       destruct(i);
     }
   }

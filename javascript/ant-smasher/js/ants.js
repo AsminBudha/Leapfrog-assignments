@@ -5,7 +5,7 @@ canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
 class Ant {
-  constructor(x, y, radius, dx, dy, ant) {
+  constructor(x, y, dx, dy, ant) {
     this.x = x;
     this.y = y;
     this.radius = 16;
@@ -21,22 +21,22 @@ class Ant {
       this.dy = -this.dy;
   };
 
-  resolveCollision = (otherBall) => {
+  resolveCollision = (otherAnt) => {
     this.dx = -this.dx;
     this.dy = -this.dy;
-    otherBall.dx = -otherBall.dx;
-    otherBall.dy = -otherBall.dy;
+    otherAnt.dx = -otherAnt.dx;
+    otherAnt.dy = -otherAnt.dy;
   };
 
   detectCollision = () => {
-    for (let i = 0; i < balls.length; i++) {
-      if (this === balls[i]) continue;
+    for (let i = 0; i < ants.length; i++) {
+      if (this === ants[i]) continue;
 
       if (
-        getDistance(this.x, this.y, balls[i].x, balls[i].y) <=
-        (this.radius + balls[i].radius) ** 2
+        getDistance(this.x, this.y, ants[i].x, ants[i].y) <=
+        (this.radius + ants[i].radius) ** 2
       ) {
-        this.resolveCollision(balls[i]);
+        this.resolveCollision(ants[i]);
       }
     }
   };
