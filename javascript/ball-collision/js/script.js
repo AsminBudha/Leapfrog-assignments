@@ -18,7 +18,6 @@ function init(totalBalls) {
 
     // Detect collision and modify center
     if (i !== 0) {
-      let j = 0;
       for (let j = 0; j < i; j++) {
         let d = getDistance(x, y, balls[j].x, balls[j].y);
         if (d <= (radius + balls[j].radius) ** 2) {
@@ -46,5 +45,5 @@ function animate() {
   balls.forEach((ball) => ball.move());
 }
 
-init(100);
+init(3);
 animate();
