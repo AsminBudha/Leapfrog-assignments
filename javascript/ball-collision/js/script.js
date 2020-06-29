@@ -9,7 +9,7 @@ let balls = [];
  */
 function init(totalBalls) {
   for (let i = 0; i < totalBalls; i++) {
-    let radius = randomRange(10, 20);
+    let radius = randomRange(5, 15);
     let x = randomRange(radius, canvas.width - radius);
     let y = randomRange(radius, canvas.height - radius);
     let dx = randomRange(-5, 5);
@@ -46,5 +46,5 @@ function animate() {
   balls.forEach((ball) => ball.move());
 }
 
-init(50);
+init(100);
 animate();
