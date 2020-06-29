@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.height = 900;
-canvas.width = 1000;
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
 
 class Ball {
   constructor(x, y, radius, dx, dy, color) {
@@ -64,7 +64,7 @@ class Ball {
 
       if (
         getDistance(this.x, this.y, balls[i].x, balls[i].y) <=
-        this.radius + balls[i].radius
+        (this.radius + balls[i].radius) ** 2
       ) {
         this.collisionEffect(balls[i]);
       }
@@ -80,10 +80,10 @@ class Ball {
   };
 
   move = () => {
+    this.detectEdge();
+    this.detectCollision();
     this.x += this.dx;
     this.y += this.dy;
     this.draw();
-    this.detectEdge();
-    this.detectCollision();
   };
 }
