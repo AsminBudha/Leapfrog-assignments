@@ -102,4 +102,12 @@ const data = [
     liveDemo: 'javascript/ball-collision',
     type: 'js-square',
   },
+  {
+    id: 14,
+    title: 'Ant Smasher',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/ball-collision',
+    liveDemo: 'javascript/ant-smasher',
+    type: 'js-square',
+  },
 ];
