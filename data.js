@@ -110,4 +110,12 @@ const data = [
     liveDemo: 'javascript/ant-smasher',
     type: 'js-square',
   },
+  {
+    id: 15,
+    title: 'Car Racing',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/car-racing',
+    liveDemo: 'javascript/car-racing',
+    type: 'js-square',
+  },
 ];

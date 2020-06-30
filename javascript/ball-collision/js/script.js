@@ -46,5 +46,5 @@ function animate() {
   balls.forEach((ball) => ball.move());
 }
 
-init(50);
+init(500);
 animate();

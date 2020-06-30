@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  position: absolute;
+  z-index: 1;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.game-initializatation-screen {
+  position: absolute;
+  width: 1000px;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+button {
+  cursor: pointer;
+}
+
+.game-over-screen {
+  position: absolute;
+  width: 1000px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+canvas {
+  position: absolute;
+}
