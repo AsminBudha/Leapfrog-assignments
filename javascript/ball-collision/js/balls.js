@@ -12,6 +12,7 @@ class Ball {
     this.dx = dx;
     this.dy = dy;
     this.color = color;
+    this.mass = 1;
   }
 
   detectEdge = () => {
@@ -22,13 +23,37 @@ class Ball {
   };
 
   resolveCollision = (otherBall) => {
-    this.dx = -this.dx;
-    this.dy = -this.dy;
-    otherBall.dx = -otherBall.dx;
-    otherBall.dy = -otherBall.dy;
+    // Create collision vector
+    let collisionVector = { x: this.x - otherBall.x, y: this.y - otherBall.y };
+    let distance = Math.sqrt(
+      getDistance(this.x, this.y, otherBall.x, otherBall.y)
+    );
+
+    // Unit vector for direction
+    let unitVector = {
+      x: collisionVector.x / distance,
+      y: collisionVector.y / distance,
+    };
+
+    let relativeVelocity = {
+      x: this.dx - otherBall.dx,
+      y: this.dy - otherBall.dy,
+    };
+
+    let speed =
+      relativeVelocity.x * unitVector.x + relativeVelocity.y * unitVector.y;
+
+    let impulse = (2 * speed) / (this.mass + otherBall.mass);
+
+    this.dx -= impulse * otherBall.mass * unitVector.x;
+    this.dy -= speed * otherBall.mass * unitVector.y;
+    otherBall.dx += speed * this.mass * unitVector.x;
+    otherBall.dy += speed * this.mass * unitVector.y;
   };
 
   detectCollision = () => {
+    this.detectEdge();
+
     for (let i = 0; i < balls.length; i++) {
       if (this === balls[i]) continue;
 
@@ -50,7 +75,6 @@ class Ball {
   };
 
   move = () => {
-    this.detectEdge();
     this.detectCollision();
     this.x += this.dx;
     this.y += this.dy;
