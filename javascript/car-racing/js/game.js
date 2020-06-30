@@ -7,15 +7,55 @@ canvas.width = 1000;
 /**
  * Game Constants
  */
-
+let score = 0;
+let possibleXPositions = [60, 410, 760];
 let speed = 10;
 let gamePaused = true;
+let playerCarPositionX = 410;
+let playerCarPositionY = 803;
 
-class Car {
-  constructor(x, y) {
-    this.x = x;
+class Obstacle {
+  constructor(y) {
+    this.x = getRandomElement(possibleXPositions);
     this.y = y;
+    this.prevY = this.y;
+    this.speed = 5;
   }
+
+  detectCollision = () => {
+    if (this.x === playerCarPositionX && playerCarPositionY - this.y <= 179) {
+      gamePaused = true;
+      gameOver();
+      return;
+    }
+  };
+
+  drawObstacle = () => {
+    const obstacle = new Image();
+    obstacle.src = 'images/car.png';
+    obstacle.onload = () => {
+      const moveObstacle = () => {
+        ctx.drawImage(obstacle, this.x, this.y);
+        this.y += this.speed;
+
+        if (this.y > canvas.height + 100) {
+          this.y = this.prevY;
+          this.x = getRandomElement(possibleXPositions);
+          score++;
+          if (speed < 50) {
+            speed += 0.5;
+            this.speed = speed / 5;
+          }
+        }
+        this.detectCollision();
+
+        if (gamePaused) return;
+        requestAnimationFrame(moveObstacle);
+      };
+
+      moveObstacle();
+    };
+  };
 }
 
 function drawRoadAndPlayer() {
@@ -23,7 +63,6 @@ function drawRoadAndPlayer() {
   road.src = 'images/road.png';
 
   road.onload = () => {
-    console.log('hello');
     let y = 0;
     const moveRoad = () => {
       ctx.drawImage(
@@ -45,9 +84,6 @@ function drawRoadAndPlayer() {
   const playerCar = new Image();
   playerCar.src = 'images/audi.png';
 
-  let playerCarPositionX = canvas.width / 2 - playerCar.width / 2;
-  let playerCarPositionY = canvas.height - playerCar.height - 30;
-
   const drawCar = () => {
     ctx.drawImage(playerCar, playerCarPositionX, playerCarPositionY);
 
@@ -59,3 +95,11 @@ function drawRoadAndPlayer() {
     drawCar();
   };
 }
+
+document.addEventListener('keydown', (e) => {
+  if (e.code == 'ArrowLeft' && playerCarPositionX > 60)
+    playerCarPositionX -= 350;
+
+  if (e.code == 'ArrowRight' && playerCarPositionX < 760)
+    playerCarPositionX += 350;
+});
