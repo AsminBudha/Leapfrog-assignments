@@ -13,6 +13,7 @@ let speed = 10;
 let gamePaused = true;
 let playerCarPositionX = 410;
 let playerCarPositionY = 803;
+let tick = 0;
 
 class Obstacle {
   constructor(y) {
@@ -78,6 +79,12 @@ function drawRoadAndPlayer() {
       );
       y += speed;
       if (y >= canvas.height) y = 0;
+
+      tick++;
+      if (tick === 180) {
+        tick = 0;
+        console.log(tick);
+      }
 
       if (gamePaused) return;
       requestAnimationFrame(moveRoad);

@@ -36,6 +36,7 @@ _('#restart').addEventListener('click', () => {
   speed = 10;
   score = 0;
   playerCarPositionX = 410;
+  _('.game-score h4').innerText = score;
 
   init();
   _('.game-over-screen').style.display = 'none';
