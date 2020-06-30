@@ -19,13 +19,16 @@ class Obstacle {
     this.x = getRandomElement(possibleXPositions);
     this.y = y;
     this.prevY = this.y;
-    this.speed = 5;
+    this.speed = speed / 2;
   }
 
   detectCollision = () => {
-    if (this.x === playerCarPositionX && playerCarPositionY - this.y <= 179) {
-      gamePaused = true;
+    if (
+      this.x === playerCarPositionX &&
+      Math.abs(playerCarPositionY - this.y) <= 179
+    ) {
       gameOver();
+      gamePaused = true;
       return;
     }
   };
@@ -36,15 +39,15 @@ class Obstacle {
     obstacle.onload = () => {
       const moveObstacle = () => {
         ctx.drawImage(obstacle, this.x, this.y);
-        this.y += this.speed;
+        this.y += speed;
 
-        if (this.y > canvas.height + 100) {
-          this.y = this.prevY;
+        if (this.y > canvas.height + 10) {
+          this.y = -400;
           this.x = getRandomElement(possibleXPositions);
           score++;
           if (speed < 50) {
-            speed += 0.5;
-            this.speed = speed / 5;
+            speed += 0.1;
+            this.speed = speed / 2;
           }
         }
         this.detectCollision();

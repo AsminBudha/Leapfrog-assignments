@@ -1,23 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: aliceblue;
+  font-family: 'Cairo', sans-serif;
+}
+
 canvas {
   position: absolute;
   z-index: 1;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
 }
 
 .container {
-  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  position: relative;
 }
 
 .game-initializatation-screen {
+  background-color: aliceblue;
   position: absolute;
   width: 1000px;
   height: 100vh;
@@ -28,20 +34,47 @@ canvas {
   z-index: 2;
 }
 
-button {
-  cursor: pointer;
-}
-
 .game-over-screen {
+  background-color: aliceblue;
   position: absolute;
   width: 1000px;
   height: 100vh;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   display: none;
+  z-index: 3;
 }
 
 canvas {
   position: absolute;
+}
+
+.instructions,
+.high-score {
+  width: 400px;
+  margin: 20px 0px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #f5f5fc;
+}
+
+.instructions ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: #607d8b;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 10px 30px;
+}
+
+.received-score,
+.received-highscore {
+  display: none;
 }
