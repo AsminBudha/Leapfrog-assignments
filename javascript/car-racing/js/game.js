@@ -13,6 +13,8 @@ let speed = 10;
 let gamePaused = true;
 let playerCarPositionX = 410;
 let playerCarPositionY = 803;
+let tick = 0;
+let canShoot = false;
 
 class Obstacle {
   constructor(y) {
@@ -29,7 +31,20 @@ class Obstacle {
     ) {
       gameOver();
       gamePaused = true;
+      tick = 0;
+      canShoot = false;
       return;
+    }
+  };
+
+  isBeingShot = () => {
+    if (this.x + 70 === bulletPositionX && bulletPositionY - this.y <= 179) {
+      bulletPositionX = playerCarPositionX + 70;
+      bulletPositionY = canvas.height - (179 + 30);
+      isShooting = false;
+
+      this.y = -(canvas.height - this.y) - 400;
+      this.x = getRandomElement(possibleXPositions);
     }
   };
 
@@ -52,6 +67,7 @@ class Obstacle {
           }
         }
         this.detectCollision();
+        if (isShooting) this.isBeingShot();
 
         if (gamePaused) return;
         requestAnimationFrame(moveObstacle);
@@ -62,7 +78,7 @@ class Obstacle {
   };
 }
 
-function drawRoadAndPlayer() {
+function drawRoad() {
   const road = new Image();
   road.src = 'images/road.png';
 
@@ -79,12 +95,22 @@ function drawRoadAndPlayer() {
       y += speed;
       if (y >= canvas.height) y = 0;
 
+      tick++;
+      if (tick === 300) {
+        tick = 0;
+        canShoot = true;
+
+        _('.shooter').style.display = 'block';
+      }
+
       if (gamePaused) return;
       requestAnimationFrame(moveRoad);
     };
     moveRoad();
   };
+}
 
+function drawPlayer() {
   const playerCar = new Image();
   playerCar.src = 'images/audi.png';
 
@@ -100,10 +126,54 @@ function drawRoadAndPlayer() {
   };
 }
 
+let isShooting = false;
+let bulletPositionX = playerCarPositionX + 70;
+let bulletPositionY = canvas.height - (179 + 30);
+
+function drawBullet() {
+  const bullet = new Image();
+  bullet.src = 'images/bullet.png';
+
+  bullet.onload = () => {
+    function drawBulletImg() {
+      ctx.drawImage(bullet, bulletPositionX, bulletPositionY);
+      if (!isShooting) return;
+
+      if (bulletPositionY === -bullet.height) {
+        bulletPositionX = playerCarPositionX + 70;
+        bulletPositionY = canvas.height - (179 + 30);
+        isShooting = false;
+        canShoot = false;
+      }
+
+      bulletPositionY = bulletPositionY - 10;
+
+      requestAnimationFrame(drawBulletImg);
+    }
+
+    drawBulletImg();
+  };
+}
+
+function drawRoadAndPlayer() {
+  drawRoad();
+  drawPlayer();
+}
+
 document.addEventListener('keydown', (e) => {
-  if (e.code == 'ArrowLeft' && playerCarPositionX > 60)
+  if (e.code === 'ArrowLeft' && playerCarPositionX > 60)
     playerCarPositionX -= 350;
 
-  if (e.code == 'ArrowRight' && playerCarPositionX < 760)
+  if (e.code === 'ArrowRight' && playerCarPositionX < 760)
     playerCarPositionX += 350;
+
+  if (e.code === 'Space' && canShoot) {
+    tick = 0;
+    isShooting = true;
+    bulletPositionX = playerCarPositionX + 70;
+    bulletPositionY = canvas.height - (179 + 30);
+    drawBullet();
+    canShoot = false;
+    _('.shooter').style.display = 'none';
+  }
 });
