@@ -45,6 +45,7 @@ class Obstacle {
           this.y = -400;
           this.x = getRandomElement(possibleXPositions);
           score++;
+          _('.game-score h4').innerText = score;
           if (speed < 50) {
             speed += 0.1;
             this.speed = speed / 2;

@@ -17,10 +17,12 @@ function init() {
   drawRoadAndPlayer();
 
   const obstacle1 = new Obstacle(-100);
-  const obstacle2 = new Obstacle(-500);
+  const obstacle2 = new Obstacle(-550);
+  const obstacle3 = new Obstacle(-1000);
 
   obstacle1.drawObstacle();
   obstacle2.drawObstacle();
+  obstacle3.drawObstacle();
 }
 
 _('#start').addEventListener('click', () => {
@@ -32,6 +34,7 @@ _('#start').addEventListener('click', () => {
 _('#restart').addEventListener('click', () => {
   gamePaused = false;
   speed = 10;
+  score = 0;
 
   init();
   _('.game-over-screen').style.display = 'none';
