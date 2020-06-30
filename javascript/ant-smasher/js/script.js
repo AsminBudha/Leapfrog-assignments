@@ -9,8 +9,7 @@ let ants = [];
  */
 function init(totalants) {
   const img = new Image();
-  img.src =
-    'https://prashantacharya.github.io/Leapfrog-assignments/javascript/ant-smasher/images/ant.png';
+  img.src = 'images/ant.png';
   img.onload = () => {
     for (let i = 0; i < totalants; i++) {
       let radius = 16;
