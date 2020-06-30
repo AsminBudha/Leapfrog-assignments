@@ -106,7 +106,7 @@ const data = [
     id: 14,
     title: 'Ant Smasher',
     sourceCode:
-      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/ball-collision',
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/ant-smasher',
     liveDemo: 'javascript/ant-smasher',
     type: 'js-square',
   },
