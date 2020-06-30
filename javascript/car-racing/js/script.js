@@ -3,13 +3,16 @@ _('.high-score span').innerText = highScore;
 
 function gameOver() {
   _('.game-over-screen').style.display = 'flex';
+  _('.shooter').style.display = 'none';
   __('.game-over-screen strong').forEach((element) => {
     element.innerText = score;
   });
 
-  if (score >= highScore) {
+  if (score > highScore) {
+    highScore = score;
     localStorage.setItem('highScore', score);
     _('.received-highscore').style.display = 'block';
+    _('.received-score').style.display = 'none';
   } else _('.received-score').style.display = 'block';
 }
 
@@ -35,6 +38,8 @@ _('#restart').addEventListener('click', () => {
   gamePaused = false;
   speed = 10;
   score = 0;
+  tick = 0;
+  canShoot = false;
   playerCarPositionX = 410;
   _('.game-score h4').innerText = score;
 
