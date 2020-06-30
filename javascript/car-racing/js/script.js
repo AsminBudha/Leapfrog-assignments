@@ -35,9 +35,8 @@ _('#restart').addEventListener('click', () => {
   gamePaused = false;
   speed = 10;
   score = 0;
+  playerCarPositionX = 410;
 
   init();
   _('.game-over-screen').style.display = 'none';
 });
-
-drawRoadAndPlayer();

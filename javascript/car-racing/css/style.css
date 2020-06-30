@@ -72,11 +72,13 @@ button {
   font-size: 20px;
   color: #ffffff;
   padding: 10px 30px;
+  border-radius: 10px;
 }
 
 .received-score,
 .received-highscore {
   display: none;
+  margin: 20px 0px;
 }
 
 .game-score {
