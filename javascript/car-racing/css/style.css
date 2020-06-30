@@ -31,7 +31,7 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
 }
 
 .game-over-screen {
@@ -77,4 +77,15 @@ button {
 .received-score,
 .received-highscore {
   display: none;
+}
+
+.game-score {
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.game-score {
+  font-size: 60px;
+  color: #ffffff;
 }
