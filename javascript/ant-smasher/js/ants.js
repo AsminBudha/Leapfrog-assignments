@@ -12,6 +12,7 @@ class Ant {
     this.dx = dx;
     this.dy = dy;
     this.ant = ant;
+    this.mass = 1;
   }
 
   detectEdge = () => {
@@ -22,10 +23,32 @@ class Ant {
   };
 
   resolveCollision = (otherAnt) => {
-    this.dx = -this.dx;
-    this.dy = -this.dy;
-    otherAnt.dx = -otherAnt.dx;
-    otherAnt.dy = -otherAnt.dy;
+    // Create collision vector
+    let collisionVector = { x: this.x - otherAnt.x, y: this.y - otherAnt.y };
+    let distance = Math.sqrt(
+      getDistance(this.x, this.y, otherAnt.x, otherAnt.y)
+    );
+
+    // Unit vector for direction
+    let unitVector = {
+      x: collisionVector.x / distance,
+      y: collisionVector.y / distance,
+    };
+
+    let relativeVelocity = {
+      x: this.dx - otherAnt.dx,
+      y: this.dy - otherAnt.dy,
+    };
+
+    let speed =
+      relativeVelocity.x * unitVector.x + relativeVelocity.y * unitVector.y;
+
+    let impulse = (2 * speed) / (this.mass + otherAnt.mass);
+
+    this.dx -= impulse * otherAnt.mass * unitVector.x;
+    this.dy -= speed * otherAnt.mass * unitVector.y;
+    otherAnt.dx += speed * this.mass * unitVector.x;
+    otherAnt.dy += speed * this.mass * unitVector.y;
   };
 
   detectCollision = () => {

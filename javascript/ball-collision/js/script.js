@@ -9,7 +9,7 @@ let balls = [];
  */
 function init(totalBalls) {
   for (let i = 0; i < totalBalls; i++) {
-    let radius = randomRange(5, 15);
+    let radius = randomRange(5, 20);
     let x = randomRange(radius, canvas.width - radius);
     let y = randomRange(radius, canvas.height - radius);
     let dx = randomRange(-5, 5);
@@ -17,6 +17,7 @@ function init(totalBalls) {
     let color = getRandomColor();
 
     // Detect collision and modify center
+    // if collision is detected while spawning
     if (i !== 0) {
       for (let j = 0; j < i; j++) {
         let d = getDistance(x, y, balls[j].x, balls[j].y);
@@ -45,5 +46,5 @@ function animate() {
   balls.forEach((ball) => ball.move());
 }
 
-init(30);
+init(50);
 animate();
