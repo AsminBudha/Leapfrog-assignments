@@ -13,3 +13,12 @@ function _(selector) {
 function __(selector) {
   return document.querySelectorAll(selector);
 }
+
+/**
+ * @param {Array} elements
+ * @returns {number}
+ */
+function getRandomElement(elements) {
+  let randomIndex = Math.floor(Math.random() * elements.length);
+  return elements[randomIndex];
+}

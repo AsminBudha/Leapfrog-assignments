@@ -8,15 +8,16 @@ class Pipe {
     this.height = 160;
     this.width = 26;
     this.pipeX = x * SCALE;
-    this.pipeY = -100 * SCALE;
+    this.pipeY = getRandomElement([-70, -100, -130]) * SCALE;
   }
 
   checkCollision = (game, bird) => {
     if (
       (bird.birdY <= this.pipeY + this.height * SCALE ||
-        bird.birdY >= this.pipeY + this.height * SCALE + this.gap) &&
-      (bird.birdX + bird.width * SCALE >= this.pipeX ||
-        bird.birdX + bird.width * SCALE >= this.pipeX + this.width * SCALE)
+        bird.birdY + bird.height >=
+          this.pipeY + this.height * SCALE + this.gap) &&
+      (bird.birdX + bird.width >= this.pipeX ||
+        bird.birdX - bird.width >= this.pipeX + this.width)
     ) {
       game.gameOver = true;
     }
@@ -47,11 +48,11 @@ class Pipe {
       this.height * SCALE
     );
 
-    this.pipeX -= 1.5;
+    this.pipeX -= 1;
     if (this.pipeX + this.width * SCALE <= 0) {
       this.pipeX = canvas.width + 100;
+      this.pipeY = getRandomElement([-70, -100, -130]) * SCALE;
       SCORE++;
-      console.log(SCORE);
     }
 
     if (gameOver) return;

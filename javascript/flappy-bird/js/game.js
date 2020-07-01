@@ -39,6 +39,7 @@ class Game {
     this.checkGameOver();
     this.pipes.forEach((pipe) => pipe.checkCollision(this, this.bird));
     if (this.gameOver) {
+      gameOver();
       return;
     }
 
@@ -56,6 +57,10 @@ class Game {
       if (e.key === ' ') {
         this.bird.jump(this.gameOver);
       }
+    });
+
+    document.addEventListener('mouseup', () => {
+      this.bird.jump(this.gameOver);
     });
   };
 

@@ -32,7 +32,7 @@ class Bird {
     );
 
     this.birdY += this.step;
-    this.step += 0.2;
+    this.step += 0.1;
 
     if (gameOver) return;
     window.requestAnimationFrame(this.draw);
