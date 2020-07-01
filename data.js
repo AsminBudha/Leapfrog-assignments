@@ -118,4 +118,12 @@ const data = [
     liveDemo: 'javascript/car-racing',
     type: 'js-square',
   },
+  {
+    id: 16,
+    title: 'Flappy Bird',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/flappy-bird',
+    liveDemo: 'javascript/flappy-bird',
+    type: 'js-square',
+  },
 ];
