@@ -7,11 +7,18 @@ class Bird {
     this.width = 17;
     this.birdX = 30 * SCALE;
     this.birdY = 128 * SCALE;
-    this.gravity = 0.1;
-    this.animationFrame = null;
+    this.tick = 0;
+    this.step = 0;
   }
 
-  draw = () => {
+  jump = (gameOver) => {
+    if (!gameOver) {
+      this.birdY -= 50;
+      this.step = 0;
+    }
+  };
+
+  draw = (gameOver) => {
     ctx.drawImage(
       this.image,
       this.imagePosX,
@@ -24,8 +31,10 @@ class Bird {
       this.height * SCALE
     );
 
-    this.birdY += this.gravity;
+    this.birdY += this.step;
+    this.step += 0.2;
 
-    this.animationFrame = requestAnimationFrame(this.draw);
+    if (gameOver) return;
+    window.requestAnimationFrame(this.draw);
   };
 }
