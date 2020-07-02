@@ -22,11 +22,6 @@ class Platform {
       this.height * SCALE
     );
 
-    this.birdY += this.gravity;
-
     if (gameOver) return;
-    window.requestAnimationFrame(() => {
-      this.draw(gameOver);
-    });
   };
 }

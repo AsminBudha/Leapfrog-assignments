@@ -35,6 +35,5 @@ class Bird {
     this.step += 0.1;
 
     if (gameOver) return;
-    window.requestAnimationFrame(this.draw);
   };
 }
