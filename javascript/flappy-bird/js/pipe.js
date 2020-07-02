@@ -48,7 +48,7 @@ class Pipe {
       this.height * SCALE
     );
 
-    this.pipeX -= 1;
+    this.pipeX -= 4;
 
     if (this.pipeX + this.width * SCALE === 30 * SCALE) SCORE++;
 
