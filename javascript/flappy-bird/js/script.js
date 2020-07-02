@@ -15,5 +15,6 @@ _('#start').addEventListener('click', function () {
 
 _('#restart').addEventListener('click', function () {
   _('.end-screen').style.display = 'none';
+  SCORE = 0;
   init();
 });

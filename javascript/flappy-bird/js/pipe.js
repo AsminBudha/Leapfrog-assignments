@@ -17,8 +17,16 @@ class Pipe {
       (birdY <= this.pipeY + this.height * SCALE ||
         birdY + height >= this.pipeY + this.height * SCALE + this.gap) &&
       (birdX + width * SCALE >= this.pipeX ||
-        birdX - width * SCALE <= this.pipeX + this.width)
+        birdX <= this.pipeX + this.width * SCALE)
     ) {
+      console.log(
+        { birdX, birdY, height: height * SCALE, width: width * SCALE },
+        this.pipeX,
+        this.pipeY + this.height * SCALE,
+        this.height * SCALE,
+        this.width * SCALE,
+        this.height * SCALE + this.gap
+      );
       game.gameOver = true;
     }
   };
