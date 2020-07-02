@@ -126,4 +126,12 @@ const data = [
     liveDemo: 'javascript/flappy-bird',
     type: 'js-square',
   },
+  {
+    id: 17,
+    title: 'Helix Animation',
+    sourceCode:
+      'https://github.com/prashantacharya/Leapfrog-assignments/tree/master/javascript/helix-animation',
+    liveDemo: 'javascript/helix-animation',
+    type: 'js-square',
+  },
 ];
