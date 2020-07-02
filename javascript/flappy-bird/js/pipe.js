@@ -12,12 +12,12 @@ class Pipe {
   }
 
   checkCollision = (game, bird) => {
+    let { birdX, birdY, height, width } = bird;
     if (
-      (bird.birdY <= this.pipeY + this.height * SCALE ||
-        bird.birdY + bird.height >=
-          this.pipeY + this.height * SCALE + this.gap) &&
-      (bird.birdX + bird.width >= this.pipeX ||
-        bird.birdX - bird.width >= this.pipeX + this.width)
+      (birdY <= this.pipeY + this.height * SCALE ||
+        birdY + height >= this.pipeY + this.height * SCALE + this.gap) &&
+      (birdX + width * SCALE >= this.pipeX ||
+        birdX - width * SCALE <= this.pipeX + this.width)
     ) {
       game.gameOver = true;
     }
@@ -49,13 +49,14 @@ class Pipe {
     );
 
     this.pipeX -= 1;
+
+    if (this.pipeX + this.width * SCALE === 30 * SCALE) SCORE++;
+
     if (this.pipeX + this.width * SCALE <= 0) {
       this.pipeX = canvas.width + 100;
       this.pipeY = getRandomElement([-70, -100, -130]) * SCALE;
-      SCORE++;
     }
 
     if (gameOver) return;
-    requestAnimationFrame(this.draw);
   };
 }
